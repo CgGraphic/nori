@@ -46,11 +46,11 @@ public:
 	typedef TPoint<Scalar, Dimension>           PointType;
 
 	/// Create a new vector with constant component vlaues
-	inline TVector(Scalar value = (Scalar) 0) { setConstant(value); }
+	inline TVector(Scalar value = (Scalar) 0) { Base::setConstant(value); }
 
 	/// Create a new 2D vector (type error if \c Dimension != 2)
 	inline TVector(Scalar x, Scalar y) : Base(x, y) { }
-	
+
 	/// Create a new 3D vector (type error if \c Dimension != 3)
 	inline TVector(Scalar x, Scalar y, Scalar z) : Base(x, y, z) { }
 
@@ -58,7 +58,7 @@ public:
 	inline TVector(Scalar x, Scalar y, Scalar z, Scalar w) : Base(x, y, z, w) { }
 
 	/// Construct a vector from MatrixBase (needed to play nice with Eigen)
-	template <typename Derived> inline TVector(const Eigen::MatrixBase<Derived>& p) 
+	template <typename Derived> inline TVector(const Eigen::MatrixBase<Derived>& p)
 		: Base(p) { }
 
 	/// Assign a vector from MatrixBase (needed to play nice with Eigen)
@@ -94,11 +94,11 @@ public:
 	typedef TPoint<Scalar, Dimension>           PointType;
 
 	/// Create a new point with constant component vlaues
-	inline TPoint(Scalar value = (Scalar) 0) { setConstant(value); }
+	inline TPoint(Scalar value = (Scalar) 0) { Base::setConstant(value); }
 
 	/// Create a new 2D point (type error if \c Dimension != 2)
 	inline TPoint(Scalar x, Scalar y) : Base(x, y) { }
-	
+
 	/// Create a new 3D point (type error if \c Dimension != 3)
 	inline TPoint(Scalar x, Scalar y, Scalar z) : Base(x, y, z) { }
 
@@ -106,7 +106,7 @@ public:
 	inline TPoint(Scalar x, Scalar y, Scalar z, Scalar w) : Base(x, y, z, w) { }
 
 	/// Construct a point from MatrixBase (needed to play nice with Eigen)
-	template <typename Derived> inline TPoint(const Eigen::MatrixBase<Derived>& p) 
+	template <typename Derived> inline TPoint(const Eigen::MatrixBase<Derived>& p)
 		: Base(p) { }
 
 	/// Assign a point from MatrixBase (needed to play nice with Eigen)
@@ -143,13 +143,13 @@ public:
 
 
 	/// Create a new normal with constant component vlaues
-	inline Normal3f(Scalar value = 0.0f) { setConstant(value); }
+	inline Normal3f(Scalar value = 0.0f) { Base::setConstant(value); }
 
-	/// Create a new 3D normal 
+	/// Create a new 3D normal
 	inline Normal3f(Scalar x, Scalar y, Scalar z) : Base(x, y, z) { }
 
 	/// Construct a normal from MatrixBase (needed to play nice with Eigen)
-	template <typename Derived> inline Normal3f(const Eigen::MatrixBase<Derived>& p) 
+	template <typename Derived> inline Normal3f(const Eigen::MatrixBase<Derived>& p)
 		: Base(p) { }
 
 	/// Assign a normal from MatrixBase (needed to play nice with Eigen)
