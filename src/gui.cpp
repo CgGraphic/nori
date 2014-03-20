@@ -19,6 +19,8 @@
 #include <nori/gui.h>
 #include <QGLWidget>
 #include <QGLShader>
+#include <QHBoxLayout>
+#include <QLabel>
 
 using namespace nori;
 

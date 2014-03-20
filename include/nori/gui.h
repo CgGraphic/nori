@@ -21,6 +21,8 @@
 
 #include <nori/block.h>
 #include <QtGui>
+#include <QWidget>
+#include <QSlider>
 
 class PreviewWidget;
 
